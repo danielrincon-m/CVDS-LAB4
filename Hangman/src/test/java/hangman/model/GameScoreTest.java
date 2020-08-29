@@ -5,9 +5,9 @@ OriginalScore:
     - >= 10 letras incorrectas -> 0
 
 BonusScore:
-    - 2 * letras incorrectas = letras correctas -> 0
-    - 2 * letras incorrectas > letras correctas -> < 0
-    - 2 * letras incorrectas < letras correctas -> > 0
+    - letras incorrectas / 2 = letras correctas -> 0
+    - letras incorrectas / 2 > letras correctas -> 0
+    - letras incorrectas / 2 < letras correctas -> > 0
 
 PowerScore:
     - Bonificación > penalización -> 0 <= puntaje <= 500
@@ -16,15 +16,16 @@ PowerScore:
  */
 package hangman.model;
 
-import com.sun.javaws.exceptions.InvalidArgumentException;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 
 public class GameScoreTest {
 
     @Test
-    public void originalScoreTest() throws InvalidArgumentException {
+    public void originalScoreTest() throws IllegalArgumentException {
         GameScore originalScore = new OriginalScore();
         int caseOne = originalScore.calculateScore(5, 0);
         int caseTwo = originalScore.calculateScore(0, 5);
@@ -36,19 +37,19 @@ public class GameScoreTest {
     }
 
     @Test
-    public void bonusScoreTest() throws InvalidArgumentException {
+    public void bonusScoreTest() throws IllegalArgumentException {
         GameScore bonusScore = new BonusScore();
-        int caseOne = bonusScore.calculateScore(4, 2);
-        int caseTwo = bonusScore.calculateScore(3, 2);
-        int caseThree = bonusScore.calculateScore(5, 2);
+        int caseOne = bonusScore.calculateScore(2, 4);
+        int caseTwo = bonusScore.calculateScore(2, 6);
+        int caseThree = bonusScore.calculateScore(5, 4);
 
         assertEquals(0, caseOne);
-        assertTrue(caseTwo < 0);
+        assertEquals(0, caseTwo);
         assertTrue(caseThree > 0);
     }
 
     @Test
-    public void powerScoreTest() throws InvalidArgumentException {
+    public void powerScoreTest() throws IllegalArgumentException {
         GameScore powerScore = new PowerScore();
         int caseOne = powerScore.calculateScore(2, 1);
         int caseTwo = powerScore.calculateScore(100, 0);
@@ -56,6 +57,6 @@ public class GameScoreTest {
 
         assertTrue(caseOne >= 0 && caseOne <= 500);
         assertEquals(caseTwo, 500);
-        assertTrue(caseThree < 0);
+        assertEquals(0, caseThree);
     }
 }

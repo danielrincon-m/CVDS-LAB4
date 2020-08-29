@@ -13,18 +13,12 @@
 
 package hangman.view;
 
-import com.google.inject.Inject;
 import hangman.model.Language;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Font;
-import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+
+import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
+import java.awt.*;
 
 public class GameOverPanel extends JPanel {
     private JLabel gameOverLabel;

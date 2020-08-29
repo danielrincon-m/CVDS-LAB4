@@ -13,9 +13,13 @@
 package hangman.model;
 
 import hangman.model.dictionary.HangmanDictionary;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.Scanner;
 
 
 public class GameModel {

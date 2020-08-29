@@ -12,13 +12,12 @@
 ****************************************************************/
 package hangman.controller;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import hangman.GUI;
-import hangman.SwingProject;
 import hangman.model.CreditsModel;
 import hangman.view.CreditsPanel;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class CreditsController {
     

@@ -11,10 +11,7 @@
 ****************************************************************/ 
 package hangman.view;
 
-import java.awt.BasicStroke;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import javax.swing.JPanel;
+import java.awt.*;
 
 public class HangmanStickmanPanel extends HangmanPanel {
     int incorrectCount;

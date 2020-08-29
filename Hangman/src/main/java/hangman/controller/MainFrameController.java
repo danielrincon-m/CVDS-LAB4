@@ -5,10 +5,11 @@
  */
 package hangman.controller;
 
-import java.awt.CardLayout;
-import javax.swing.JPanel;
 import hangman.model.MainFrameModel;
 import hangman.view.MainFrame;
+
+import javax.swing.*;
+import java.awt.*;
 
 
 /**

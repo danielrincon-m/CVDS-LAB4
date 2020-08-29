@@ -11,11 +11,8 @@
 ****************************************************************/ 
 package hangman.view;
 
-import java.awt.BasicStroke;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 
 public class LetterBlankPanel extends JPanel{
     private String letter;

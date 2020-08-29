@@ -29,7 +29,6 @@ package hangman;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-
 import hangman.setup.factoryMethod.HangmanDefaultFactoryMethod;
 import hangman.setup.guice.HangmanFactoryServices;
 

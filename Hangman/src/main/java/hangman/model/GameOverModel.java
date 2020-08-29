@@ -13,8 +13,6 @@
 ****************************************************************/ 
 package hangman.model;
 
-import com.google.inject.Inject;
-
 public class GameOverModel {
     private int score;
     public  String GAME_OVER_TEXT = "Game Over!";

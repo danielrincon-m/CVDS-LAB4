@@ -1,13 +1,11 @@
 package hangman.model;
 
-import com.sun.javaws.exceptions.InvalidArgumentException;
-
 public class OriginalScore implements GameScore {
     /**
      * {@inheritDoc}
      */
     @Override
-    public int calculateScore(int correctCount, int incorrectCount) throws InvalidArgumentException {
-        return 0;
+    public int calculateScore(int correctCount, int incorrectCount) throws IllegalArgumentException {
+        return Math.max(100 - incorrectCount * 10, 0);
     }
 }

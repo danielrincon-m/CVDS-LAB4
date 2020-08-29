@@ -12,14 +12,13 @@
 ****************************************************************/ 
 package hangman.controller;
 
+import hangman.GUI;
+import hangman.model.FunctionModel;
+import hangman.view.FunctionPanel;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
-
-import hangman.GUI;
-import hangman.SwingProject;
-import hangman.model.FunctionModel;
-import hangman.view.FunctionPanel;
 
 
 public class FunctionController {

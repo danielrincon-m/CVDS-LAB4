@@ -13,18 +13,11 @@ package hangman.view;
 
 import com.google.inject.Inject;
 import hangman.model.Language;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.GridLayout;
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+
+import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
+import java.awt.*;
 
 public class FunctionPanel extends JPanel{
     private JButton playButton;

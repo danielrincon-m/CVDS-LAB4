@@ -12,8 +12,8 @@
 ****************************************************************/ 
 package hangman.model;
 
-import com.google.inject.Inject;
-import java.awt.Color;
+import java.awt.*;
+
 import static hangman.SwingProject.CONTRIBUTORS;
 
 public class HighScoreModel {

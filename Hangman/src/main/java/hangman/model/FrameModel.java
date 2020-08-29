@@ -5,7 +5,7 @@
  */
 package hangman.model;
 
-import javax.swing.JComponent;
+import javax.swing.*;
 
 /**
  *

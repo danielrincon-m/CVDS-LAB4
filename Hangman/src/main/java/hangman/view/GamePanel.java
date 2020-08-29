@@ -12,19 +12,12 @@
 ****************************************************************/ 
 package hangman.view;
 
-import com.google.inject.Inject;
 import hangman.model.Language;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.GridLayout;
+
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 public class GamePanel extends JPanel{
     private JButton skipButton;

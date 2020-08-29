@@ -11,17 +11,11 @@
 ****************************************************************/
 package hangman.view;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
+import java.awt.*;
+
 import static hangman.SwingProject.CONTRIBUTORS;
 
 public class HighScorePanel extends JPanel{

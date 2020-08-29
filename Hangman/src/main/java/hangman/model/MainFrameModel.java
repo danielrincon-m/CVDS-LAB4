@@ -5,7 +5,8 @@
  */
 package hangman.model;
 
-import javax.swing.JComponent;
+import javax.swing.*;
+
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 /**

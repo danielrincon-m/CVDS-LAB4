@@ -13,17 +13,15 @@
 ****************************************************************/ 
 package hangman.controller;
 
-import com.google.inject.Inject;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.event.AncestorEvent;
-import javax.swing.event.AncestorListener;
-
 import hangman.GUI;
-import hangman.SwingProject;
 import hangman.model.GameOverModel;
 import hangman.model.Language;
 import hangman.view.GameOverPanel;
+
+import javax.swing.event.AncestorEvent;
+import javax.swing.event.AncestorListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class GameOverController {
     private GameController gameControllerReference;

@@ -14,19 +14,17 @@
 package hangman.controller;
 
 import com.google.inject.Inject;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import javax.swing.JButton;
-import javax.swing.Timer;
-import javax.swing.event.AncestorEvent;
-import javax.swing.event.AncestorListener;
-
 import hangman.GUI;
-import hangman.SwingProject;
 import hangman.model.GameModel;
 import hangman.model.Language;
 import hangman.view.GamePanel;
+
+import javax.swing.*;
+import javax.swing.event.AncestorEvent;
+import javax.swing.event.AncestorListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class GameController{
     private GamePanel panel;

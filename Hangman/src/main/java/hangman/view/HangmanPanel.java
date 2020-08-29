@@ -5,8 +5,8 @@
  */
 package hangman.view;
 
-import java.awt.Graphics;
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  *

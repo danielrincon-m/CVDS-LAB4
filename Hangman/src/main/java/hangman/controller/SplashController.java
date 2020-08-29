@@ -12,16 +12,15 @@
 ****************************************************************/ 
 package hangman.controller;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.Timer;
-import javax.swing.event.AncestorEvent;
-import javax.swing.event.AncestorListener;
-
 import hangman.GUI;
-import hangman.SwingProject;
 import hangman.model.SplashModel;
 import hangman.view.SplashPanel;
+
+import javax.swing.*;
+import javax.swing.event.AncestorEvent;
+import javax.swing.event.AncestorListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class SplashController{
     private SplashPanel panel;

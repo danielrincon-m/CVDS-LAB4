@@ -1,10 +1,13 @@
 package hangman;
 
+import com.google.inject.Guice;
 import com.google.inject.Inject;
+import com.google.inject.Injector;
 import hangman.controller.*;
 import hangman.model.*;
 import hangman.model.dictionary.HangmanDictionary;
 import hangman.setup.factoryMethod.HangmanFactoryMethod;
+import hangman.setup.guice.ScoreFactoryServices;
 import hangman.view.*;
 
 import java.awt.*;
@@ -79,7 +82,9 @@ public class GUI {
                 mainFrameController
         );
 
-        GameModel gameModel = new GameModel(dictionary);
+        Injector modelInjector = Guice.createInjector(new ScoreFactoryServices(dictionary));
+        GameModel gameModel = modelInjector.getInstance(GameModel.class);
+
         gameController = new GameController(
                 new GamePanel(gameModel.getCharacterSet(), hangmanPanel, language),
                 gameModel,

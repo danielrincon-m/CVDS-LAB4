@@ -12,6 +12,7 @@
 ****************************************************************/ 
 package hangman.model;
 
+import com.google.inject.Inject;
 import hangman.model.dictionary.HangmanDictionary;
 
 import java.time.LocalDateTime;
@@ -29,34 +30,40 @@ public class GameModel {
     private int gameScore;
     private int[] lettersUsed;
     
-    
-    private HangmanDictionary dictionary;
+    private final GameScore scoreEngine;
+    private final HangmanDictionary dictionary;
     
     private Scanner scan;
     private String randomWord;
     private char[] randomWordCharArray;
-    
-    
-   
-    public GameModel(HangmanDictionary dictionary){
-        //this.dictionary = new EnglishDictionaryDataSource();
-        this.dictionary=dictionary;
+
+
+    @Inject
+    public GameModel(GameScore scoreEngine, HangmanDictionary dictionary) {
+        this.scoreEngine = scoreEngine;
+        this.dictionary = dictionary;
         randomWord = selectRandomWord();
+        System.out.println(randomWord);
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 100;
-        
+        calculateScore();
+    }
+
+    //purpose: Re-calculates the score
+    private void calculateScore() {
+        gameScore = scoreEngine.calculateScore(correctCount, incorrectCount);
     }
     
     //method: reset
     //purpose: reset this game model for a new game
     public void reset(){
         randomWord = selectRandomWord();
+        System.out.println(randomWord);
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 100;
+        calculateScore();
     }
 
     //setDateTime
@@ -78,12 +85,11 @@ public class GameModel {
         }
         if(positions.size() == 0){
             incorrectCount++;
-            gameScore -= 10;
         } else {
             correctCount += positions.size();
         }
+        calculateScore();
         return positions;
-        
     }
     
     //getDateTime

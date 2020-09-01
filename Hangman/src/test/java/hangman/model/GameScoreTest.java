@@ -28,11 +28,15 @@ public class GameScoreTest {
     public void originalScoreTest() throws IllegalArgumentException {
         GameScore originalScore = new OriginalScore();
         int caseOne = originalScore.calculateScore(5, 0);
+        int caseTwoLowBound = originalScore.calculateScore(0, 1);
         int caseTwo = originalScore.calculateScore(0, 5);
-        int caseThree = originalScore.calculateScore(0, 11);
+        int caseTwoHighBound = originalScore.calculateScore(0, 9);
+        int caseThree = originalScore.calculateScore(0, 10);
 
         assertEquals(100, caseOne);
+        assertEquals(90, caseTwoLowBound);
         assertTrue(caseTwo > 0 && caseTwo < 100);
+        assertEquals(10, caseTwoHighBound);
         assertEquals(0, caseThree);
     }
 
@@ -41,10 +45,12 @@ public class GameScoreTest {
         GameScore bonusScore = new BonusScore();
         int caseOne = bonusScore.calculateScore(2, 4);
         int caseTwo = bonusScore.calculateScore(2, 6);
-        int caseThree = bonusScore.calculateScore(5, 4);
+        int caseThreeBound = bonusScore.calculateScore(3, 4);
+        int caseThree = bonusScore.calculateScore(10, 4);
 
         assertEquals(0, caseOne);
         assertEquals(0, caseTwo);
+        assertTrue(caseThreeBound > 0);
         assertTrue(caseThree > 0);
     }
 
